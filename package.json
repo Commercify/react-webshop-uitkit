@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript-boilerplate",
+  "name": "react-webshop-uikit",
   "version": "1.0.0",
-  "description": "A simple React with Typescript boilerplate with Webpack and Babel",
+  "description": "A React UI Kit to develop single page webshops",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erolsmsr58/react-typescript-boilerplate.git"
+    "url": "git+https://github.com/Commercify/react-webshop-uitkit.git"
   },
   "keywords": [
     "javascript",
@@ -22,9 +22,9 @@
   "author": "erolsmsr58",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/erolsmsr58/react-typescript-boilerplate/issues"
+    "url": "https://github.com/Commercify/react-webshop-uitkit/issues"
   },
-  "homepage": "https://github.com/erolsmsr58/react-typescript-boilerplate#readme",
+  "homepage": "https://github.com/Commercify/react-webshop-uitkit#readme",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
