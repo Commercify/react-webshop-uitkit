@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config: webpack.Configuration = {
   entry: './src/index.tsx',
@@ -19,7 +20,15 @@ const config: webpack.Configuration = {
             ]
           }
         }
-      }
+      },
+      // {
+      //   test: /\.(scss|css)$/,
+      //   use: ['style-loader', 'css-loader', 'sass-loader'],
+      // },
+      // {
+      //   test: /\.(scss|css)$/,
+      //   use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      // }
     ]
   },
   resolve: {
@@ -41,6 +50,9 @@ const config: webpack.Configuration = {
         files: './src/**/*'
       },
     }),
+    // new MiniCssExtractPlugin({
+    //   filename: './src/main.css',
+    // })
   ]
 };
 
