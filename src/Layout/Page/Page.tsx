@@ -1,11 +1,18 @@
 import React, { ReactElement } from 'react';
+import cn from 'classnames';
 
-export const Page = (props: { children: ReactElement }): ReactElement => {
-  const { children } = props;
+type PageProps = {
+  children: ReactElement
+}
 
+const Page = ({ children }: PageProps): ReactElement => {
   return <>
-    <div className='page'>
+    <div className={cn({
+      'page': true
+    })}>
       {children}
     </div>
   </>
 }
+
+export default Page;

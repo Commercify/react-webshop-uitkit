@@ -1,2 +1,11 @@
+body {
+  margin: 0; }
+
 .page {
-  background-color: red; }
+  position: absolute;
+  width: 100%;
+  min-height: 100%; }
+
+.container {
+  margin: auto;
+  max-width: 1024px; }

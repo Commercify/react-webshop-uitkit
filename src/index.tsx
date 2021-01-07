@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Page } from './Layout/Page/Page';
+import * as UI from './Main';
 
 const App = () => (
-  <Page>
-    <h1>React Webshop UI Kit</h1>
-  </Page>
+  <UI.Page>
+    <UI.Container>
+      <h1>React Webshop UI Kit</h1>
+    </UI.Container>
+  </UI.Page>
 );
 
 ReactDOM.render(

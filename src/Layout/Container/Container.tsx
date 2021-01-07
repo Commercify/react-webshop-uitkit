@@ -1,11 +1,15 @@
 import React, { ReactElement } from 'react';
 
-export const Container = (props: { children: ReactElement }): ReactElement => {
-  const { children } = props;
+type ContainerProps = {
+  children: ReactElement
+}
 
+const Container = ({ children }: ContainerProps): ReactElement => {
   return <>
     <div className='container'>
       {children}
     </div>
   </>
 }
+
+export default Container;
