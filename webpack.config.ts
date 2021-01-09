@@ -1,10 +1,12 @@
 import path from 'path';
 import webpack from 'webpack';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config: webpack.Configuration = {
-  entry: './src/index.tsx',
+  entry: [
+    './src/index.tsx',
+    './src/Style/Main.scss'
+  ],
   module: {
     rules: [
       {
@@ -21,22 +23,25 @@ const config: webpack.Configuration = {
           }
         }
       },
-      // {
-      //   test: /\.(scss|css)$/,
-      //   use: ['style-loader', 'css-loader', 'sass-loader'],
-      // },
-      // {
-      //   test: /\.(scss|css)$/,
-      //   use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      // }
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { outputPath: 'build/', name: 'react-webshop-uikit.min.css'}
+          },
+          'sass-loader'
+        ]
+      }
     ]
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'build/bundle.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'build'),
@@ -49,10 +54,7 @@ const config: webpack.Configuration = {
       eslint: {
         files: './src/**/*'
       },
-    }),
-    // new MiniCssExtractPlugin({
-    //   filename: './src/main.css',
-    // })
+    })
   ]
 };
 

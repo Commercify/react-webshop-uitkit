@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './Style/Main.scss';
+
 import * as UI from './Main';
 
 const App = () => (
